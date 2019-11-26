@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
+  // for anything that we use in the template
   declarations: [
     AppComponent
   ],
