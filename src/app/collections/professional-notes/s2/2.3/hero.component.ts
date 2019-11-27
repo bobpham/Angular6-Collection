@@ -8,7 +8,7 @@ export class HeroComponent {
     public form = new FormGroup({
         name: new FormControl('', Validators.required),
     });
-    submit(event) {
+    submit(event: any) {
         console.log(event);
         console.log(this.form.controls.name.value);
     }
