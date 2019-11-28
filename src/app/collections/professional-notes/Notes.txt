@@ -1,0 +1,3 @@
+####### Notes ######
+
+Difference between Angular 8 & React

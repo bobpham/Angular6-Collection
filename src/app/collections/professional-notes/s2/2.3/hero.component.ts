@@ -1,7 +1,7 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
 @Component({
-    selector: 'app-hero',
+    selector: 'sample-hero',
     templateUrl: 'hero.component.html',
 })
 export class HeroComponent {
