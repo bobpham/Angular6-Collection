@@ -6,6 +6,7 @@ import { HeroComponent} from './s2/2.3/hero.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { NameParentComponent} from './s3/3.1/nameparent.component';
 import { NameChildComponent} from './s3/3.1/namechild.component';
+import { HeroService} from './s2/2.3/hero.service';
 
 @NgModule({
     // for anything that we use in the template
@@ -20,6 +21,7 @@ import { NameChildComponent} from './s3/3.1/namechild.component';
         ReactiveFormsModule,
         CommonModule
     ],
+    providers: [HeroService],
     exports:[WrapperComponent]
 
 })

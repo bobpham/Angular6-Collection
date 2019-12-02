@@ -2,3 +2,14 @@
   <input type="text" formControlName="name" />
   <button type="submit">Show name</button>
 </form>
+
+<h2>My Heroes</h2>
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes">
+      <span class="badge">{{hero}}</span>
+      <button class="delete" title="X"
+      (click)="delete(hero)">x</button>
+    </li>
+  </ul>
+</div>
