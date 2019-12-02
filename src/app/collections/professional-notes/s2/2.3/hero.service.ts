@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class HeroService {
 
-    messages: string[] = [];
+   heroes: string[] = [];
 
-    add(message: string) {
-        this.messages.push(message);
+    add(hero: string) {
+        this.heroes.push(hero);
     }
 
     clear() {
-        this.messages = [];
+        this.heroes = [];
+    }
+
+    getHeroes(): Observable<string[]> {
+
+        return of(this.heroes);
     }
 
 }
