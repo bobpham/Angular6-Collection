@@ -13,6 +13,7 @@ export class HeroComponent implements OnInit {
     }
 
     heroes: string[];
+
     constructor(private heroService: HeroService) { }
 
     public form = new FormGroup({

@@ -1,3 +1,18 @@
 ####### Notes ######
 
-Difference between Angular 8 & React
+# Rxjs
+## Understanding Rxjs Observable:
+https://medium.com/@AnkurRatra/demystifying-rxjs-observable-467c52309ac
+
+1. Observable is a function: It is just a function which takes one parameter or three callback (observer) and returns a tear down function.
+
+The example below is an obse to which if we subscribe we get first three odd numbers.
+
+function firstThreeOddNumbers$ (observer) {
+    observer.next(1);
+    observer.next(3);
+    observer.next(5);
+    observer.complete();
+    return () => console.log('clean up function');
+}
+
