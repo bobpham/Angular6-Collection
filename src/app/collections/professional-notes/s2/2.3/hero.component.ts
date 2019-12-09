@@ -12,10 +12,12 @@ export class HeroComponent implements OnInit {
         this.getHeroes();
     }
 
+    // tslint:disable-next-line: member-ordering
     heroes: string[];
 
     constructor(private heroService: HeroService) { }
 
+    // tslint:disable-next-line: member-ordering
     public form = new FormGroup({
         name: new FormControl('', Validators.required),
     });
@@ -24,7 +26,7 @@ export class HeroComponent implements OnInit {
         console.log(event);
         console.log(this.form.controls.name.value);
         this.heroService.add(this.form.controls.name.value);
-        this.form.controls.name.setValue("");
+        this.form.controls.name.setValue('');
     }
 
     getHeroes(): void {
@@ -33,7 +35,6 @@ export class HeroComponent implements OnInit {
     }
 
     delete(hero: string): void {
-        this.heroService.deleteHero(hero).subscribe(x => {  this.getHeroes();});
-
+        this.heroService.deleteHero(hero).subscribe(x => {  this.getHeroes(); });
     }
 }

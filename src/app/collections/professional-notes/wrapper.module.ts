@@ -22,7 +22,7 @@ import { HeroService} from './s2/2.3/hero.service';
         CommonModule
     ],
     providers: [HeroService],
-    exports:[WrapperComponent]
+    exports: [WrapperComponent]
 
 })
 export class WrapperModule { }
