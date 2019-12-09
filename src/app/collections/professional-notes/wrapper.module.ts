@@ -7,11 +7,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { HeroService} from './s2/2.3/hero.service';
 
+import {CounterAppComponent} from './s3/3.1/counterApp.component';
+import {CounterComponent} from './s3/3.1/counter.component';
+
+
 @NgModule({
     // for anything that we use in the template
     declarations: [
         WrapperComponent,
-        HeroComponent
+        HeroComponent,
+        CounterAppComponent,
+        CounterComponent
     ],
     imports: [
         FormsModule,
