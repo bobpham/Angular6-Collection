@@ -6,18 +6,17 @@ import { HeroService } from './hero.service';
     selector: 'sample-hero',
     templateUrl: 'hero.component.html',
 })
+
 export class HeroComponent implements OnInit {
 
     ngOnInit(): void {
         this.getHeroes();
     }
 
-    // tslint:disable-next-line: member-ordering
     heroes: string[];
 
     constructor(private heroService: HeroService) { }
 
-    // tslint:disable-next-line: member-ordering
     public form = new FormGroup({
         name: new FormControl('', Validators.required),
     });
