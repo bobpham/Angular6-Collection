@@ -1,19 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'counter-comp',
     template: `
       <div>
-        <button>UP</button>
+        <button (click)= "increment()">UP</button>
         {{count}}
-        <button>DOWN</button>
+        <button (click)= "decrement()">DOWN</button>
+        <button (click)= "sendMsg()">SEND</button>
       </div>
     `
 })
 export class CounterComponent {
 
-    @Input()
-    count: number = 0;
+    @Input() count: number = 0;
+    @Output() onSendMsg = new EventEmitter<number>(); // emit the counter
 
     increment() {
         this.count++;
@@ -21,5 +22,9 @@ export class CounterComponent {
 
     decrement() {
         this.count--;
+    }
+
+    sendMsg() {
+        this.onSendMsg.emit(this.count);
     }
 }
