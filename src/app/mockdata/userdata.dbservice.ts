@@ -1,8 +1,8 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { User } from './user-data';
+import { User } from '../collections/samples/sample-01/user-data';
 
 
-export class UserData implements InMemoryDbService {
+export class UserMockData implements InMemoryDbService {
     createDb() {
         const users: User[] = [
             { id: 1, name: 'Ram', email: 'ram@gmail.com', contact: '0000000000' },

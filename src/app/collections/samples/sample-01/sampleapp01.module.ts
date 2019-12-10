@@ -1,7 +1,7 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserDataService } from '../../../services/userdata.service';
+import { UserDataService } from './userdata.service';
 import { SampleApp01Component } from './sampleapp01.component';
 
 @NgModule({
