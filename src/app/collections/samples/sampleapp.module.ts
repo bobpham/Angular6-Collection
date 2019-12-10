@@ -1,25 +1,25 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { SampleApp01Module } from './sample-01/sampleapp01.module';
 import { CommonModule } from '@angular/common';
-import { UserDataService } from './userdata.service';
-import { SampleApp01Component } from './sampleapp01.component';
+import {SampleAppComponent } from './sampleapp.component';
 
 @NgModule({
     // for anything that we use in the template
     declarations: [
-        SampleApp01Component,
-        
+        SampleAppComponent
     ],
     imports: [
         FormsModule,
         ReactiveFormsModule,
-        CommonModule
+        CommonModule,
+        SampleApp01Module
     ],
-    providers: [UserDataService],
-    exports: [SampleApp01Component]
+    providers: [],
+    exports: [SampleApp01Module, SampleAppComponent]
 
 })
-export class WrapperModule { }
+export class SampleAppModule { }
 /*
     Interset point: We create a seperate module, will be loaded into the root module
 */

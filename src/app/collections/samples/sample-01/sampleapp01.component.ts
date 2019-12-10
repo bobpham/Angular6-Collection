@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user-data';
-import { UserDataService } from './userdata.service';
-import { FormGroup, FormControl } from '@angular/forms';
+import { User } from '../../../services/user-data';
+import { UserDataService } from '../../../services/userdata.service';
+
 
 
 @Component({
@@ -19,7 +19,6 @@ export class SampleApp01Component implements OnInit {
             this.users = data;
         });
     }
-
 
     ngOnInit() {
         this.getUsers();
